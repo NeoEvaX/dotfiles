@@ -166,7 +166,7 @@ source ~/fzf-git.sh/fzf-git.sh
 
 # ---- Eza (better ls) -----
 
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # thefuck alias
 eval $(thefuck --alias)

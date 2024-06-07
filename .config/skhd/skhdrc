@@ -1,0 +1,7 @@
+# stop/start/restart yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
+
+cmd + shift - left : yabai -m space --focus prev
+cmd + shift - right : yabai -m space --focus next
