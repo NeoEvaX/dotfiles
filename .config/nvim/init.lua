@@ -108,7 +108,7 @@ vim.g['diagnostics_active'] = true
 function Toggle_diagnostics()
   if vim.g.diagnostics_active then
     vim.g.diagnostics_active = false
-    vim.diagnostic.disable()
+    vim.diagnostic.enable(false, _)
   else
     vim.g.diagnostics_active = true
     vim.diagnostic.enable()
