@@ -116,7 +116,7 @@ function Toggle_diagnostics()
 end
 
 vim.keymap.set('n', '<leader>td', Toggle_diagnostics, { noremap = true, silent = true, desc = 'Toggle Diagnostic' })
-
+vim.keymap.set('n', '<leader>tp', '<cmd>Precognition toggle<CR>', { desc = 'Toggle Precognition' })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
