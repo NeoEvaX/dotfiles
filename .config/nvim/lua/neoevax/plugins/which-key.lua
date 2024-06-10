@@ -13,7 +13,11 @@ return {
         ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
         --['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
         ['<leader>l'] = { name = '[L]SP', _ = 'which_key_ignore' },
+        ['<leader>g'] = { name = '[G]o', _ = 'which_key_ignore' },
+        ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
+        ['<leader>h'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
       }
+
       -- visual mode
       require('which-key').register({
         ['<leader>h'] = { 'Git [H]unk' },

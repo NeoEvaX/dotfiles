@@ -56,6 +56,10 @@ return {
         },
         completion = { completeopt = 'menu,menuone,noinsert,preview,noselect' },
 
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
         --
@@ -110,6 +114,7 @@ return {
         },
         sources = {
           { name = 'supermaven' },
+          { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'buffer' },
           { name = 'path' },
@@ -118,9 +123,36 @@ return {
           expandable_indicator = true,
           fields = { 'abbr', 'kind', 'menu' },
           format = lspkind.cmp_format {
-            symbol_map = { Supermaven = '' },
+            symbol_map = { Supermaven = '' },
             maxwidth = 50,
             ellipsis_char = '...',
+          },
+        },
+        sorting = {
+          priority_weight = 1.0,
+          comparators = {
+            cmp.config.compare.offset,
+            cmp.config.compare.exact,
+            cmp.config.compare.score,
+
+            -- copied from cmp-under, but I don't think I need the plugin for this.
+            -- I might add some more of my own.
+            function(entry1, entry2)
+              local _, entry1_under = entry1.completion_item.label:find '^_+'
+              local _, entry2_under = entry2.completion_item.label:find '^_+'
+              entry1_under = entry1_under or 0
+              entry2_under = entry2_under or 0
+              if entry1_under > entry2_under then
+                return false
+              elseif entry1_under < entry2_under then
+                return true
+              end
+            end,
+
+            cmp.config.compare.kind,
+            cmp.config.compare.sort_text,
+            cmp.config.compare.length,
+            cmp.config.compare.order,
           },
         },
       }

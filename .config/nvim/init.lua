@@ -115,9 +115,18 @@ function Toggle_diagnostics()
   end
 end
 
-vim.keymap.set('n', '<leader>td', Toggle_diagnostics, { noremap = true, silent = true, desc = 'Toggle Diagnostic' })
-vim.keymap.set('n', '<leader>tp', '<cmd>Precognition toggle<CR>', { desc = 'Toggle Precognition' })
+vim.keymap.set('n', '<leader>td', Toggle_diagnostics, { noremap = true, silent = true, desc = 'Toggle [D]iagnostic' })
+vim.keymap.set('n', '<leader>tp', '<cmd>Precognition toggle<CR>', { desc = 'Toggle [P]recognition' })
+
+vim.keymap.set('n', '<leader>ts', '<cmd>SupermavenToggle<CR>', { desc = 'Toggle [S]upermaven' })
+
+vim.keymap.set('n', '<leader>gj', '<cmd>GoTagAdd json<CR>', { desc = 'Add [J]son struct tags' })
+vim.keymap.set('n', '<leader>gy', '<cmd>GoTagAdd json<CR>', { desc = 'Add [Y]aml struct tags' })
+vim.keymap.set('n', '<leader>gt', '<cmd>GoMod tidy<CR>', { desc = 'Go mod [T]idy' })
+vim.keymap.set('n', '<leader>gi', '<cmd>GoIfErr<CR>', { desc = 'Generate [I]f error blocks' })
+vim.keymap.set('n', '<leader>gg', '<cmd>GoTestAll<CR>', { desc = 'Generate tests' })
 -- [[ Basic Autocommands ]]
+--
 --  See `:help lua-guide-autocommands`
 
 -- Highlight when yanking (copying) text
