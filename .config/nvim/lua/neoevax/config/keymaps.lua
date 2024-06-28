@@ -31,6 +31,22 @@ vim.keymap.set('n', '<leader>tp', '<cmd>Precognition toggle<CR>', { desc = 'Togg
 vim.keymap.set('n', '<leader>ts', '<cmd>SupermavenToggle<CR>', { desc = 'Toggle [S]upermaven' })
 vim.keymap.set('n', '<leader>tk', '<cmd>Screenkey toggle<CR>', { desc = 'Toggle Screen[K]ey' })
 
+-- ChatGPT keymaps
+
+vim.keymap.set('n', '<leader>cc', '<cmd>ChatGPT<CR>', { desc = 'ChatGPT' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ce', '<cmd>ChatGPTEditWithInstruction<CR>', { desc = 'Edit with instruction' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cg', '<cmd>ChatGPTRun grammar_correction<CR>', { desc = 'Grammar Correction' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ct', '<cmd>ChatGPTRun translate<CR>', { desc = 'Translate' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ck', '<cmd>ChatGPTRun keywords<CR>', { desc = 'Keywords' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cd', '<cmd>ChatGPTRun docstring<CR>', { desc = 'Docstring' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ca', '<cmd>ChatGPTRun add_tests<CR>', { desc = 'Add Tests' })
+vim.keymap.set({ 'n', 'v' }, '<leader>co', '<cmd>ChatGPTRun optimize_code<CR>', { desc = 'Optimize Code' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cs', '<cmd>ChatGPTRun summarize<CR>', { desc = 'Summarize' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cf', '<cmd>ChatGPTRun fix_bugs<CR>', { desc = 'Fix Bugs' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cx', '<cmd>ChatGPTRun explain_code<CR>', { desc = 'Explain Code' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cr', '<cmd>ChatGPTRun roxygen_edit<CR>', { desc = 'Roxygen Edit' })
+vim.keymap.set({ 'n', 'v' }, '<leader>cl', '<cmd>ChatGPTRun code_readability_analysis<CR>', { desc = 'Code Readability Analysis' })
+
 -- Go Specific Keymaps
 vim.keymap.set('n', '<leader>gj', '<cmd>GoTagAdd json<CR>', { desc = 'Add [J]son struct tags' })
 vim.keymap.set('n', '<leader>gy', '<cmd>GoTagAdd json<CR>', { desc = 'Add [Y]aml struct tags' })

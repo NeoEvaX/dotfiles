@@ -16,6 +16,7 @@ return {
         ['<leader>g'] = { name = '[G]o', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ebug', _ = 'which_key_ignore' },
         ['<leader>h'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
+        ['<leader>c'] = { name = '[C]hatGPT', _ = 'which_key_ignore' },
       }
 
       -- visual mode
