@@ -9,11 +9,6 @@ vim.g.have_nerd_font = true
 
 vim.g.netrw_liststyle = 3
 
--- [[ Setting options ]]
--- See `:help vim.opt`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
-
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -158,8 +153,15 @@ require('lazy').setup({
       require('catppuccin').setup {
         integrations = {
           alpha = true,
+          barbecue = {
+            dim_diname = true,
+            bold_basename = true,
+            dim_context = false,
+            alt_background = false,
+          },
           cmp = true,
           harpoon = true,
+          leap = true,
           mason = true,
           mini = {
             enabled = true,

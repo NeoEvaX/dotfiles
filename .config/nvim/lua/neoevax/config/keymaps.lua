@@ -30,9 +30,9 @@ vim.keymap.set('n', '<leader>td', Toggle_diagnostics, { noremap = true, silent =
 vim.keymap.set('n', '<leader>tp', '<cmd>Precognition toggle<CR>', { desc = 'Toggle [P]recognition' })
 vim.keymap.set('n', '<leader>ts', '<cmd>SupermavenToggle<CR>', { desc = 'Toggle [S]upermaven' })
 vim.keymap.set('n', '<leader>tk', '<cmd>Screenkey toggle<CR>', { desc = 'Toggle Screen[K]ey' })
+vim.keymap.set('n', '<leader>tb', '<cmd>Barbecue toggle<CR>', { desc = 'Toggle [B]arebecue' })
 
 -- ChatGPT keymaps
-
 vim.keymap.set('n', '<leader>cc', '<cmd>ChatGPT<CR>', { desc = 'ChatGPT' })
 vim.keymap.set({ 'n', 'v' }, '<leader>ce', '<cmd>ChatGPTEditWithInstruction<CR>', { desc = 'Edit with instruction' })
 vim.keymap.set({ 'n', 'v' }, '<leader>cg', '<cmd>ChatGPTRun grammar_correction<CR>', { desc = 'Grammar Correction' })
