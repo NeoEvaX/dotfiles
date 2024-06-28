@@ -50,6 +50,6 @@ app_names="^(Calculator|Authy Desktop|Postgres|VLC|System Preferences"
 app_names+="|AppCleaner|1Password|WireGuard|System Settings|Tailscale"
 app_names+="|Logi Options|JetBrains Toolbox|Contexts|JetBrains Gateway"
 app_names+="|Logi Options\+|SteelSeries GG Client|Stats|Steam|Activity Monitor"
-app_names+="|Postman|MacWhisper|Audio Hijack|GOG Galaxy"
+app_names+="|Postman|MacWhisper|Audio Hijack|GOG Galaxy|Microsoft Remote Desktop Beta"
 app_names+="|Neocom|Fork|Parsec|eve-online|Calculator|Todoist|Downie|Streaks)$"
 yabai -m rule --add app="${app_names}" manage=off
