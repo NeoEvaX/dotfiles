@@ -6,7 +6,7 @@ background_image:
   # the full path to the picture is: ~/.warp/themes/warp.jpg
   path: ../Wallpapers/Stormlight.jpg 
   # the opacity value is required and can range from 0-100
-  opacity: 15
+  opacity: 30
 ############################################################### SEE ABOVE
 foreground: '#cdd6f4'
 details: darker
