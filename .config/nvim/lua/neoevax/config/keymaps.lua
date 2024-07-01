@@ -55,7 +55,7 @@ vim.keymap.set('n', '<leader>gi', '<cmd>GoIfErr<CR>', { desc = 'Generate [I]f er
 vim.keymap.set('n', '<leader>gg', '<cmd>GoTestAll<CR>', { desc = 'Generate tests' })
 
 -- Don't put the character into the clipboard/register
-vim.keymap.set('n', 'x', '_x')
+vim.keymap.set('n', 'x', '"_x')
 
 vim.keymap.set('n', '<C-j>', function()
   vim.diagnostic.goto_next()
