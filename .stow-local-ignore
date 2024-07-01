@@ -1,2 +1,7 @@
 scripts
 .DS_Store
+
+.warp/themes/SteamyBackgrounds
+.warp/themes/catppuccin_private.yml
+
+scripts

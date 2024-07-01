@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Goes in the /usr/local/bin folder
 # Directory containing the images
 IMG_DIR=~/.warp/themes/SteamyBackgrounds
 
