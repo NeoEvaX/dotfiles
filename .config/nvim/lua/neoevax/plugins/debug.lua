@@ -37,6 +37,28 @@ return {
         'delve',
       },
     }
+    dap.configurations.cs = {
+      {
+        type = 'netcoredbg',
+        name = 'launch - netcoredbg',
+        request = 'launch',
+        program = function()
+          local cwd = vim.fn.getcwd()
+          local d = vim.fn.fnamemodify(cwd, ':t')
+          return vim.fn.input('Path to dll: ', cwd .. '/bin/Debug/netcoreapp3.1/' .. d .. '.dll', 'file')
+        end,
+      },
+      {
+        type = 'netcoredbg',
+        name = 'attach - netcoredbg',
+        request = 'attach',
+        processId = function()
+          local pgrep = vim.fn.system "pgrep -f 'dotnet run'"
+          vim.fn.setenv('NETCOREDBG_ATTACH_PID', pid)
+          return tonumber(pgrep)
+        end,
+      },
+    }
 
     -- Basic debugging keymaps, feel free to change to your liking!
     vim.keymap.set('n', '<F5>', dap.continue, { desc = 'Debug: Start/Continue' })
