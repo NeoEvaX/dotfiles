@@ -54,6 +54,14 @@ vim.keymap.set('n', '<leader>gt', '<cmd>GoMod tidy<CR>', { desc = 'Go mod [T]idy
 vim.keymap.set('n', '<leader>gi', '<cmd>GoIfErr<CR>', { desc = 'Generate [I]f error blocks' })
 vim.keymap.set('n', '<leader>gg', '<cmd>GoTestAll<CR>', { desc = 'Generate tests' })
 
+-- Obsidian Specific Keymaps
+
+vim.keymap.set('n', '<leader>oo', '<cmd>ObsidianOpen<CR>', { desc = 'Opens note in [O]bsidian app' })
+vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>', { desc = 'Lookup all [B]acklinks for note' })
+vim.keymap.set('n', '<leader>oj', '<cmd>ObsidianToday<CR>', { desc = "Generate Today's [J]ournal" })
+vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianTemplate<CR>', { desc = 'Insert [T]emplate into note' })
+vim.keymap.set('n', '<leader>ol', '<cmd>ObsidianLinks<CR>', { desc = 'Show all [L]inks from note' })
+
 -- Don't put the character into the clipboard/register
 vim.keymap.set('n', 'x', '"_x')
 
