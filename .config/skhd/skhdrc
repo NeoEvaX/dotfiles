@@ -4,8 +4,8 @@ ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
 
 # === Move focus ===
-cmd + shift - left : yabai -m space --focus prev
-cmd + shift - right : yabai -m space --focus next
+cmd + shift - h : yabai -m space --focus prev
+cmd + shift - l : yabai -m space --focus next
 
 # === window focus ===
 cmd - h : yabai -m window --focus west
