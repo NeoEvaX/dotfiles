@@ -53,7 +53,7 @@ keymap.set('n', '<leader>tl', function()
     vim.notify('Disabled codespell', vim.log.levels.INFO)
     vim.diagnostic.reset(nil, 0)
   end
-end, { desc = '[T]oggle codespe[l]l' })
+end, { desc = 'Toggle codespe[l]l' })
 
 -- ChatGPT keymaps
 keymap.set('n', '<leader>cc', '<cmd>ChatGPT<CR>', { desc = 'ChatGPT' })
