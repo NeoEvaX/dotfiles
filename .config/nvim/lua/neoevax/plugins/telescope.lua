@@ -8,7 +8,6 @@ return {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
         'nvim-telescope/telescope-fzf-native.nvim',
-
         -- `build` is used to run some command when the plugin is installed/updated.
         -- This is only run then, not every time Neovim starts up.
         build = 'make',
@@ -20,7 +19,7 @@ return {
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-
+      { 'xiyaowong/telescope-emoji.nvim' },
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
@@ -74,6 +73,7 @@ return {
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
       pcall(require('telescope').load_extension, 'noice')
+      pcall(require('telescope').load_extension, 'emoji')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -87,6 +87,7 @@ return {
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[S]earch existing [B]uffers' })
+      vim.keymap.set('n', '<leader>se', '<cmd>Telescope emoji<cr>', { desc = '[S]earch existing [E]moji' })
       vim.keymap.set('n', '<leader>st', function()
         require('noice').cmd 'telescope'
       end, { desc = '[S]earch [T]oasts' })
