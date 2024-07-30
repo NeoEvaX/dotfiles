@@ -90,6 +90,7 @@ return {
       vim.keymap.set('n', '<leader>st', function()
         require('noice').cmd 'telescope'
       end, { desc = '[S]earch [T]oasts' })
+      vim.keymap.set('n', '<leader>sp', builtin.spell_suggest, { desc = '[S]earch S[p]elling' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader><leader>', function()
