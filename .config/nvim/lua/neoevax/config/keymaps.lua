@@ -84,6 +84,9 @@ keymap.set('n', '<leader>oj', '<cmd>ObsidianToday<CR>', { desc = "Generate Today
 keymap.set('n', '<leader>ot', '<cmd>ObsidianTemplate<CR>', { desc = 'Insert [T]emplate into note' })
 keymap.set('n', '<leader>ol', '<cmd>ObsidianLinks<CR>', { desc = 'Show all [L]inks from note' })
 
+-- Oil
+
+keymap.set('n', '<leader>to', '<cmd>Oil<CR>', { desc = 'Toggle [O]il' })
 -- Don't put the character into the clipboard/register
 keymap.set('n', 'x', '"_x')
 
