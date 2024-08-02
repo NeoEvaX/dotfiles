@@ -1,2 +1,5 @@
 .DS_Store
-.warp/themes/SteamyBackgrounds
+.warp/themes/HomeBackgrounds/*
+.warp/Wallpapers/*
+.warp/themes/catppuccin_home.yml
+
