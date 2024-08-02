@@ -160,6 +160,25 @@ return {
         -- clangd = {},
         gopls = {},
         sqls = {},
+        html = {
+          capabilities = capabilities,
+          filetypes = { 'html', 'templ' },
+        },
+        htmx = {
+          capabilities = capabilities,
+          filetypes = { 'html', 'templ' },
+        },
+        tailwindcss = {
+          capabilities = capabilities,
+          filetypes = { 'templ', 'javascript', 'typescript', 'astro', 'react' },
+          settings = {
+            tailwindCSS = {
+              includeLanguages = {
+                templ = 'html',
+              },
+            },
+          },
+        },
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
