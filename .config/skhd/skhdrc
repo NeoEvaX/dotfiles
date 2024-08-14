@@ -1,23 +1,26 @@
 # === Manage yabai ==
-# ctrl + alt - q : yabai --stop-service
-# ctrl + alt - s : yabai --start-service
-# ctrl + alt - r : yabai --restart-service
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
 
 # === Move focus ===
-cmd + shift - h : aerospace list-workspaces --monitor focused --empty no | aerospace workspace prev
-cmd + shift - l : aerospace list-workspaces --monitor focused --empty no | aerospace workspace next
+#cmd + shift - h : aerospace list-workspaces --monitor focused --empty no | aerospace workspace prev
+#cmd + shift - l : aerospace list-workspaces --monitor focused --empty no | aerospace workspace next
+
+cmd + shift - h : yabai -m space --focus prev
+cmd + shift - l : yabai -m space --focus next
 
 # === window focus ===
-# cmd - h : yabai -m window --focus west
-# cmd - k : yabai -m window --focus north
-# cmd - l : yabai -m window --focus east
-# cmd - j : yabai -m window --focus south
+cmd - h : yabai -m window --focus west
+cmd - k : yabai -m window --focus north
+cmd - l : yabai -m window --focus east
+cmd - j : yabai -m window --focus south
 
 # === swap windows ===
-# ctrl + cmd - j : yabai -m window --swap south
-# ctrl + cmd - k : yabai -m window --swap north
-# ctrl + cmd - h : yabai -m window --swap west
-# ctrl + cmd - l : yabai -m window --swap east
+ctrl + cmd - j : yabai -m window --swap south
+ctrl + cmd - k : yabai -m window --swap north
+ctrl + cmd - h : yabai -m window --swap west
+ctrl + cmd - l : yabai -m window --swap east
 
 # toggle window float
-# shift + alt - f: yabai -m window --toggle float --grid 4:4:1:1:2:2
+shift + alt - f: yabai -m window --toggle float --grid 4:4:1:1:2:2
