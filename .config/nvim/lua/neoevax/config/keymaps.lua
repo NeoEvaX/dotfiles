@@ -13,7 +13,6 @@ keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnosti
 
 -- NvimTree
 keymap.set('n', '<leader>te', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle file explorer' }) -- toggle file explorer
-keymap.set('n', '<leader>tf', '<cmd>NvimTreeFindFileToggle<CR>', { desc = 'Toggle file explorer on current file' }) -- toggle file explorer on current file
 keymap.set('n', '<leader>tc', '<cmd>NvimTreeCollapse<CR>', { desc = 'Collapse file explorer' }) -- collapse file explorer
 keymap.set('n', '<leader>tr', '<cmd>NvimTreeRefresh<CR>', { desc = 'Refresh file explorer' }) -- refresh file explorer
 
@@ -44,6 +43,7 @@ keymap.set('n', '<leader>tp', '<cmd>Precognition toggle<CR>', { desc = 'Toggle [
 keymap.set('n', '<leader>ts', '<cmd>SupermavenToggle<CR>', { desc = 'Toggle [S]upermaven' })
 keymap.set('n', '<leader>tk', '<cmd>Screenkey toggle<CR>', { desc = 'Toggle Screen[K]ey' })
 keymap.set('n', '<leader>tb', '<cmd>Barbecue toggle<CR>', { desc = 'Toggle [B]arebecue' })
+keymap.set('n', '<leader>tf', '<cmd>FormatToggle<CR>', { desc = 'Toggle [F]ormat' })
 keymap.set('n', '<leader>tl', function()
   vim.g.codespell_active = not vim.g.codespell_active
   if vim.g.codespell_active then

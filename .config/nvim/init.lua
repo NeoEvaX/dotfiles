@@ -78,6 +78,30 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 
+-- Toggle Format
+vim.api.nvim_create_user_command('FormatToggle', function(args)
+  if vim.g.disable_autoformat or vim.b.disable_autoformat then
+    vim.b.disable_autoformat = false
+    vim.g.disable_autoformat = false
+    vim.notify = require 'notify'
+    vim.notify('autoformat-on-save enabled globally', 'info', { title = 'conform.nvim' })
+  else
+    if args.bang then
+      -- FormatDisable! will disable formatting just for this buffer
+      vim.b.disable_autoformat = true
+      vim.notify = require 'notify'
+      vim.notify('autoformat-on-save disabled for file', 'info', { title = 'conform.nvim' })
+    else
+      vim.g.disable_autoformat = true
+      vim.notify = require 'notify'
+      vim.notify('autoformat-on-save disabled globally', 'info', { title = 'conform.nvim' })
+    end
+  end
+end, {
+  desc = 'Toggle autoformat-on-save',
+  bang = true,
+})
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
