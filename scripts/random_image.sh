@@ -8,3 +8,8 @@ IMG_DIR=~/.warp/themes/HomeBackgrounds
 random_image=$(find ~/.warp/themes/HomeBackgrounds -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.JPEG" \) | /opt/homebrew/bin/gshuf -n 1)
 
 cp ${random_image} "${random_image%/*}/1.jpg" 
+
+IMG_DIR=~/.config/wezterm/HomeBackgrounds
+random_image=$(find ~/.config/wezterm/HomeBackgrounds -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.JPEG" \) | /opt/homebrew/bin/gshuf -n 1)
+
+cp ${random_image} "${random_image%/*}/1.jpg" 
