@@ -19,22 +19,40 @@ Default_background = Normal_background
 -- toggle backgrounds with ALT+l
 wezterm.on("toggle-background-mode", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
-	if overrides.background[1].source.File == Normal_background then
-		overrides.background = {
-			{
-				source = {
-					File = Home_background,
+	if overrides.background then
+		if overrides.background[1].source.File == Normal_background then
+			overrides.background = {
+				{
+					source = {
+						File = Home_background,
+					},
 				},
-			},
-			{
-				source = {
-					Color = "rgba(28, 33, 39, 0.75)",
+				{
+					source = {
+						Color = "rgba(28, 33, 39, 0.75)",
+					},
+					height = "100%",
+					width = "100%",
 				},
-				height = "100%",
-				width = "100%",
-			},
-		}
-		wezterm.log_info("Switching to Home Background")
+			}
+			wezterm.log_info("Switching to Home Background")
+		else
+			overrides.background = {
+				{
+					source = {
+						File = Normal_background,
+					},
+				},
+				{
+					source = {
+						Color = "rgba(28, 33, 39, 0.75)",
+					},
+					height = "100%",
+					width = "100%",
+				},
+			}
+			wezterm.log_info("Switching to Normal Background")
+		end
 	else
 		overrides.background = {
 			{
