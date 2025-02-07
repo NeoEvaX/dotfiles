@@ -42,7 +42,7 @@ yabai -m mouse_drop_action swap
 
 # Unmanaged apps
 app_titles="(System Preferences|Preferences"
-app_titles+="|QuickTime Player|Streaks)$"
+app_titles+="|QuickTime Player|Streaks|Speechify)$"
 yabai -m rule --add title="${app_titles}" manage=off
 
 yabai -m rule --add app="Slack" title="^Huddle" manage=off
@@ -50,7 +50,7 @@ yabai -m rule --add app="Slack" title="^Huddle" manage=off
 yabai -m rule --add app=Finder manage=off
 
 app_names="^(Calculator|Authy Desktop|Postgres|VLC|System Preferences"
-app_names+="|AppCleaner|1Password|WireGuard|System Settings|Tailscale"
+app_names+="|AppCleaner|1Password|WireGuard|System Settings|Tailscale|Speechify"
 app_names+="|Logi Options|JetBrains Toolbox|Contexts|JetBrains Gateway|Windows App"
 app_names+="|Logi Options\+|SteelSeries GG Client|Stats|Steam|Activity Monitor"
 app_names+="|Postman|MacWhisper|Audio Hijack|GOG Galaxy|Microsoft Remote Desktop Beta"
