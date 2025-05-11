@@ -16,7 +16,7 @@ Home_background = wezterm.config_dir .. "/HomeBackgrounds/1.jpg"
 Normal_background = wezterm.config_dir .. "/Wallpapers/Stormlight.jpg"
 Default_background = Normal_background
 
--- toggle backgrounds with ALT+l
+-- toggle backgrounds with ALT+SHIFT+B
 wezterm.on("toggle-background-mode", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
 	if overrides.background then

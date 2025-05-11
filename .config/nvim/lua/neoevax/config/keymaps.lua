@@ -55,21 +55,6 @@ keymap.set('n', '<leader>tl', function()
   end
 end, { desc = 'Toggle codespe[l]l' })
 
--- ChatGPT keymaps
-keymap.set('n', '<leader>cc', '<cmd>ChatGPT<CR>', { desc = 'ChatGPT' })
-keymap.set({ 'n', 'v' }, '<leader>ce', '<cmd>ChatGPTEditWithInstruction<CR>', { desc = 'Edit with instruction' })
-keymap.set({ 'n', 'v' }, '<leader>cg', '<cmd>ChatGPTRun grammar_correction<CR>', { desc = 'Grammar Correction' })
-keymap.set({ 'n', 'v' }, '<leader>ct', '<cmd>ChatGPTRun translate<CR>', { desc = 'Translate' })
-keymap.set({ 'n', 'v' }, '<leader>ck', '<cmd>ChatGPTRun keywords<CR>', { desc = 'Keywords' })
-keymap.set({ 'n', 'v' }, '<leader>cd', '<cmd>ChatGPTRun docstring<CR>', { desc = 'Docstring' })
-keymap.set({ 'n', 'v' }, '<leader>ca', '<cmd>ChatGPTRun add_tests<CR>', { desc = 'Add Tests' })
-keymap.set({ 'n', 'v' }, '<leader>co', '<cmd>ChatGPTRun optimize_code<CR>', { desc = 'Optimize Code' })
-keymap.set({ 'n', 'v' }, '<leader>cs', '<cmd>ChatGPTRun summarize<CR>', { desc = 'Summarize' })
-keymap.set({ 'n', 'v' }, '<leader>cf', '<cmd>ChatGPTRun fix_bugs<CR>', { desc = 'Fix Bugs' })
-keymap.set({ 'n', 'v' }, '<leader>cx', '<cmd>ChatGPTRun explain_code<CR>', { desc = 'Explain Code' })
-keymap.set({ 'n', 'v' }, '<leader>cr', '<cmd>ChatGPTRun roxygen_edit<CR>', { desc = 'Roxygen Edit' })
-keymap.set({ 'n', 'v' }, '<leader>cl', '<cmd>ChatGPTRun code_readability_analysis<CR>', { desc = 'Code Readability Analysis' })
-
 -- Go Specific Keymaps
 keymap.set('n', '<leader>gj', '<cmd>GoTagAdd json<CR>', { desc = 'Add [J]son struct tags' })
 keymap.set('n', '<leader>gy', '<cmd>GoTagAdd json<CR>', { desc = 'Add [Y]aml struct tags' })
