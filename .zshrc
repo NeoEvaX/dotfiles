@@ -179,7 +179,7 @@ alias cd="z"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ---- Timers
-alias work="timer 10 && terminal-notifier -message 'Pomodoro'\
+alias work="timer 25m && terminal-notifier -message 'Pomodoro'\
         -title 'Work Timer is up! Take a Break 😊'\
         -appIcon '~/Pictures/pumpkin.png'\
         -sound Crystal"
