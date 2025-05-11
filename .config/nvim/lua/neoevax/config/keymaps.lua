@@ -62,13 +62,6 @@ keymap.set('n', '<leader>gt', '<cmd>GoMod tidy<CR>', { desc = 'Go mod [T]idy' })
 keymap.set('n', '<leader>gi', '<cmd>GoIfErr<CR>', { desc = 'Generate [I]f error blocks' })
 keymap.set('n', '<leader>gg', '<cmd>GoTestAll<CR>', { desc = 'Generate tests' })
 
--- Obsidian Specific Keymaps
-keymap.set('n', '<leader>oo', '<cmd>ObsidianOpen<CR>', { desc = 'Opens note in [O]bsidian app' })
-keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>', { desc = 'Lookup all [B]acklinks for note' })
-keymap.set('n', '<leader>oj', '<cmd>ObsidianToday<CR>', { desc = "Generate Today's [J]ournal" })
-keymap.set('n', '<leader>ot', '<cmd>ObsidianTemplate<CR>', { desc = 'Insert [T]emplate into note' })
-keymap.set('n', '<leader>ol', '<cmd>ObsidianLinks<CR>', { desc = 'Show all [L]inks from note' })
-
 -- Oil
 
 keymap.set('n', '<leader>to', '<cmd>Oil<CR>', { desc = 'Toggle [O]il' })
