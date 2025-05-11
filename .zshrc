@@ -16,7 +16,7 @@ export PKG_CONFIG_PATH="/Users/pcosta/.brew/opt/xz/lib/pkgconfig:$PKG_CONFIG_PAT
 export ZSH="/Users/iankremer/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
+HOMEBREW_NO_VERIFY_ATTESTATION=1
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -177,3 +177,14 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# ---- Timers
+alias work="timer 10 && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -appIcon '~/Pictures/pumpkin.png'\
+        -sound Crystal"
+        
+alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -appIcon '~/Pictures/pumpkin.png'\
+        -sound Crystal"
