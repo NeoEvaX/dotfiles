@@ -90,7 +90,7 @@ config.background = {
 config.keys = {
 	{
 		key = "b",
-		mods = "ALT|SHIFT",
+		mods = "CMD|SHIFT",
 		action = wezterm.action.EmitEvent("toggle-background-mode"),
 	},
 }
