@@ -15,7 +15,6 @@ return {
         { '<leader>d', desc = '[D]ebug', icon = '' },
         { '<leader>h', desc = '[H]arpoon', icon = '󱡅' },
         { '<leader>o', desc = '[O]sidian', icon = '󰇈' },
-        { '<leader>c', desc = '[C]hatGPT', icon = '󰚩' },
         { '<leader>m', desc = '[M]arkdown', icon = '󱇠' },
       }
     end,
