@@ -4,6 +4,12 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+-- Disable problematic features
+enable_csi_u_key_encoding = false,
+
+-- Disable clipboard integration that might interfere
+selection_word_boundary = " \t\n{}[]()\"'`,;:",
+
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 config.font_size = 16
 config.freetype_load_flags = "NO_HINTING"
